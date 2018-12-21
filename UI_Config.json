@@ -1,0 +1,498 @@
+{
+  "output_file": "config.json",
+  "CoreCommand": {
+    "type": "textbox",
+    "value": "!pool",
+    "label": "Command",
+    "tooltip": "The command that will be responded to.",
+    "group": "Core"
+  },
+  "CorePermission": {
+    "type": "dropdown",
+    "value": "everyone",
+    "items": [
+      "everyone",
+      "moderator",
+      "subscriber",
+      "editor"
+    ],
+    "label": "Permission",
+    "tooltip": "Who is able to use the command",
+    "group": "Core"
+  },
+  "CoreCooldown": {
+    "type": "slider",
+    "value": 1,
+    "min": 0,
+    "max": 5,
+    "ticks": 1,
+    "label": "Cooldown (seconds)",
+    "tooltip": "How long the command should go on cooldown for",
+    "group": "Core"
+  },
+  "CoreMessage": {
+    "type": "textbox",
+    "value": "$total $currency have been donated towards \"$goal\". $remaining $currency remaining to reach the goal.",
+    "label": "Message",
+    "tooltip": "Message that should be displayed when the user does uses this command by itself",
+    "group": "Core"
+  },
+  "addEnabled": {
+    "type": "checkbox",
+    "value": "true",
+    "label": "Enabled",
+    "tooltip": "Whether this command is enabled.",
+    "group": "Add"
+  },
+  "addAliases": {
+    "type": "textbox",
+    "value": "deposit,spend,donate,contribute",
+    "label": "Aliases",
+    "tooltip": "Comma separate list of aliases for the add command. Should not contain spaces.",
+    "group": "Add"
+  },
+  "addPermission": {
+    "type": "dropdown",
+    "value": "everyone",
+    "items": [
+      "everyone",
+      "moderator",
+      "subscriber",
+      "editor"
+    ],
+    "label": "Permission",
+    "tooltip": "Who is able to use the command",
+    "group": "Add"
+  },
+  "addCooldown": {
+    "type": "slider",
+    "value": 1,
+    "min": 0,
+    "max": 5,
+    "ticks": 1,
+    "label": "Cooldown (seconds)",
+    "tooltip": "How long the command should go on cooldown for",
+    "group": "Add"
+  },
+  "addGenerous": {
+    "type": "checkbox",
+    "value": "false",
+    "label": "Viewers can contribute more than the target amount",
+    "tooltip": "",
+    "group": "Add"
+  },
+  "addExample": {
+    "type": "textbox",
+    "value": "!command add 123",
+    "label": "Example usage (please do not change)",
+    "tooltip": "Sample usage of this command. Please do not modify",
+    "group": "Add"
+  },
+  "addSuccess": {
+    "type": "textbox",
+    "value": "Thank you, $user, for adding $contribution $currency to the pot. You've added $total_contribution $currency so far.",
+    "label": "Success Message",
+    "tooltip": "Chat message to send when the user's contribution was successful",
+    "group": "Add"
+  },
+  "addFailure": {
+    "type": "textbox",
+    "value": "Sorry, $user. You only have $currency_available $currency available, so you cannot contribute $contribution $currency.",
+    "label": "Failure Message",
+    "tooltip": "Chat message to send when the user's contribution failed. (Contributing more currency than user has)",
+    "group": "Add"
+  },
+  "addGenerousMessage": {
+    "type": "textbox",
+    "value": "Thank you for your generosity, $user, but the goal has already been reached.",
+    "label": "Failure Message",
+    "tooltip": "Chat message to send when the user's contribution failed. (Contributing more currency beyond goal)",
+    "group": "Add"
+  },
+  "commitEnabled": {
+    "type": "checkbox",
+    "value": "true",
+    "label": "Enabled",
+    "tooltip": "Whether this command is enabled.",
+    "group": "Commit"
+  },
+  "commitAliases": {
+    "type": "textbox",
+    "value": "clear,reset",
+    "label": "Aliases",
+    "tooltip": "Comma separate list of aliases for this command. Should not contain spaces.",
+    "group": "Commit"
+  },
+  "commitPermission": {
+    "type": "dropdown",
+    "value": "editor",
+    "items": [
+      "everyone",
+      "moderator",
+      "subscriber",
+      "editor"
+    ],
+    "label": "Permission",
+    "tooltip": "Who is able to use the command",
+    "group": "Commit"
+  },
+  "commitCooldown": {
+    "type": "slider",
+    "value": 4,
+    "min": 0,
+    "max": 30,
+    "ticks": 1,
+    "label": "Cooldown (seconds)",
+    "tooltip": "How long the command should go on cooldown for",
+    "group": "Commit"
+  },
+  "commitSuccess": {
+    "type": "textbox",
+    "value": "$user has committed and reset the currency pool.",
+    "label": "Message",
+    "tooltip": "Chat message to send when the pool has been reset",
+    "group": "Commit"
+  },
+  "commitConfirmation": {
+    "type": "textbox",
+    "value": "Are you sure you wish to reset the goal? Use this command again to confirm.",
+    "label": "Confirmation Message",
+    "tooltip": "Chat message to send informing the user to do the command a second time",
+    "group": "Commit"
+  },
+  "commitExample": {
+    "type": "textbox",
+    "value": "!command commit",
+    "label": "Example usage (please do not change)",
+    "tooltip": "Sample usage of this command. Please do not modify",
+    "group": "Commit"
+  },
+  "goalEnabled": {
+    "type": "checkbox",
+    "value": "true",
+    "label": "Enabled",
+    "tooltip": "Whether this command is enabled.",
+    "group": "Goal"
+  },
+  "goalAliases": {
+    "type": "textbox",
+    "value": "",
+    "label": "Aliases",
+    "tooltip": "Comma separate list of aliases for the goal command. Should not contain spaces.",
+    "group": "Goal"
+  },
+  "goalPermission": {
+    "type": "dropdown",
+    "value": "editor",
+    "items": [
+      "everyone",
+      "moderator",
+      "subscriber",
+      "editor"
+    ],
+    "label": "Permission",
+    "tooltip": "Who is able to use the command",
+    "group": "Goal"
+  },
+  "goalCooldown": {
+    "type": "slider",
+    "value": 4,
+    "min": 0,
+    "max": 30,
+    "ticks": 1,
+    "label": "Cooldown (seconds)",
+    "tooltip": "How long the command should go on cooldown for",
+    "group": "Goal"
+  },
+  "goalClear": {
+    "type": "checkbox",
+    "value": false,
+    "label": "Setting goal should reset the pool?",
+    "tooltip": "If checked, using !command goal will reset the pool",
+    "group": "Goal"
+  },
+  "goalExample": {
+    "type": "textbox",
+    "value": "!command goal A brand new car",
+    "label": "Example usage (please do not change)",
+    "tooltip": "Sample usage of this command. Please do not modify",
+    "group": "Goal"
+  },
+  "goalSuccess": {
+    "type": "textbox",
+    "value": "$user set the $currency donation goal to \"$goal\"",
+    "label": "Message",
+    "tooltip": "Chat message to send when the goal has been changed",
+    "group": "Goal"
+  },
+  "removeEnabled": {
+    "type": "checkbox",
+    "value": "true",
+    "label": "Enabled",
+    "tooltip": "Whether this command is enabled.",
+    "group": "Remove"
+  },
+  "removeAliases": {
+    "type": "textbox",
+    "value": "withdraw,subtract,sub,undo,refund",
+    "label": "Aliases",
+    "tooltip": "Comma separate list of aliases for the remove command. Should not contain spaces.",
+    "group": "Remove"
+  },
+  "removePermission": {
+    "type": "dropdown",
+    "value": "everyone",
+    "items": [
+      "everyone",
+      "moderator",
+      "subscriber",
+      "editor"
+    ],
+    "label": "Permission",
+    "tooltip": "Who is able to use the command",
+    "group": "Remove"
+  },
+  "removeCooldown": {
+    "type": "slider",
+    "value": 4,
+    "min": 0,
+    "max": 30,
+    "ticks": 1,
+    "label": "Cooldown (seconds)",
+    "tooltip": "How long the command should go on cooldown for",
+    "group": "Remove"
+  },
+  "removeModeratorOnly": {
+    "type": "checkbox",
+    "value": true,
+    "label": "Moderators can remove anyone's contribution?",
+    "tooltip": "Whether moderators can refund any contributions, not just their own",
+    "group": "Remove"
+  },
+  "removeExample": {
+    "type": "textbox",
+    "value": "!command remove 123, !command remove otheruser 123",
+    "label": "Example usage (please do not change)",
+    "tooltip": "Sample usage of this command. Please do not modify",
+    "group": "Remove"
+  },
+  "removeSelfSuccess": {
+    "type": "textbox",
+    "value": "$user has been refunded $contribution $currency",
+    "label": "Self Success",
+    "tooltip": "Chat message to send when a contribution has been refunded to the user",
+    "group": "Remove"
+  },
+  "removeSelfFailure": {
+    "type": "textbox",
+    "value": "Sorry, $user, but you cannot refund $contribution $currency. You can refund a maximum of $total_contribution $currency",
+    "label": "Self Failure",
+    "tooltip": "Chat message to send when a refund failed. (User had not contributed requested refund)",
+    "group": "Remove"
+  },
+  "removeOtherSuccess": {
+    "type": "textbox",
+    "value": "$user has refunded $contribution $currency to $target",
+    "label": "Other Success",
+    "tooltip": "Chat message to send when a contribution has been refunded to the user by a moderator",
+    "group": "Remove"
+  },
+  "removeOtherFailure": {
+    "type": "textbox",
+    "value": "Sorry, $user, but you cannot refund $contribution $currency to $target. You can refund a maximum of $total_contribution $currency",
+    "label": "Other Failure",
+    "tooltip": "Chat message to send when a moderator cannot refund currency. (User had not contributed requested refund)",
+    "group": "Remove"
+  },
+  "targetEnabled": {
+    "type": "checkbox",
+    "value": "true",
+    "label": "Enabled",
+    "tooltip": "Whether this command is enabled.",
+    "group": "Target"
+  },
+  "targetAliases": {
+    "type": "textbox",
+    "value": "",
+    "label": "Aliases",
+    "tooltip": "Comma separate list of aliases for the target command. Should not contain spaces.",
+    "group": "Target"
+  },
+  "targetPermission": {
+    "type": "dropdown",
+    "value": "editor",
+    "items": [
+      "everyone",
+      "moderator",
+      "subscriber",
+      "editor"
+    ],
+    "label": "Permission",
+    "tooltip": "Who is able to use the command",
+    "group": "Target"
+  },
+  "targetCooldown": {
+    "type": "slider",
+    "value": 4,
+    "min": 0,
+    "max": 30,
+    "ticks": 1,
+    "label": "Cooldown (seconds)",
+    "tooltip": "How long the command should go on cooldown for",
+    "group": "Target"
+  },
+  "targetExample": {
+    "type": "textbox",
+    "value": "!command target 11",
+    "label": "Example usage (please do not change)",
+    "tooltip": "Sample usage of this command. Please do not modify",
+    "group": "Target"
+  },
+  "targetSuccess": {
+    "type": "textbox",
+    "value": "$user has set the $currency pool target to $target $currency",
+    "label": "Message",
+    "tooltip": "Chat message to send when pool target has been updated",
+    "group": "Target"
+  },
+  "topAliases": {
+    "type": "textbox",
+    "value": "leaders,leaderboard",
+    "label": "Aliases",
+    "tooltip": "Comma separate list of aliases for the top command. Should not contain spaces.",
+    "group": "Top"
+  },
+  "topEnabled": {
+    "type": "checkbox",
+    "value": "true",
+    "label": "Enabled",
+    "tooltip": "Whether this command is enabled.",
+    "group": "Top"
+  },
+  "topPermission": {
+    "type": "dropdown",
+    "value": "everyone",
+    "items": [
+      "everyone",
+      "moderator",
+      "subscriber",
+      "editor"
+    ],
+    "label": "Permission",
+    "tooltip": "Who is able to use the command",
+    "group": "Top"
+  },
+  "topCooldown": {
+    "type": "slider",
+    "value": 4,
+    "min": 0,
+    "max": 30,
+    "ticks": 1,
+    "label": "Cooldown (seconds)",
+    "tooltip": "How long the command should go on cooldown for",
+    "group": "Top"
+  },
+  "topDefault": {
+    "type": "slider",
+    "value": 3,
+    "min": 0,
+    "max": 11,
+    "ticks": 1,
+    "label": "Default number of leaders",
+    "tooltip": "Default number of contributors to display if no number is specified",
+    "group": "Top"
+  },
+  "topExample": {
+    "type": "textbox",
+    "value": "!command top 11",
+    "label": "Example usage (please do not change)",
+    "tooltip": "Sample usage of this command. Please do not modify",
+    "group": "Top"
+  },
+  "topMessage": {
+    "type": "textbox",
+    "value": "Top $currency contributors: $top",
+    "label": "Message",
+    "tooltip": "Chat message to send when displaying the top contributors",
+    "group": "Top"
+  },
+  "transferEnabled": {
+    "type": "checkbox",
+    "value": "true",
+    "label": "Enabled",
+    "tooltip": "Whether this command is enabled.",
+    "group": "Transfer"
+  },
+  "transferAliases": {
+    "type": "textbox",
+    "value": "",
+    "label": "Aliases",
+    "tooltip": "Comma separate list of aliases for the transfer command. Should not contain spaces.",
+    "group": "Transfer"
+  },
+  "transferPermission": {
+    "type": "dropdown",
+    "value": "editor",
+    "items": [
+      "everyone",
+      "moderator",
+      "subscriber",
+      "editor"
+    ],
+    "label": "Permission",
+    "tooltip": "Who is able to use the command",
+    "group": "Transfer"
+  },
+  "transferCooldown": {
+    "type": "slider",
+    "value": 4,
+    "min": 0,
+    "max": 30,
+    "ticks": 1,
+    "label": "Cooldown (seconds)",
+    "tooltip": "How long the command should go on cooldown for",
+    "group": "Transfer"
+  },
+  "transferExample": {
+    "type": "textbox",
+    "value": "!command transfer Viewer1 Viewer2",
+    "label": "Example usage (please do not change)",
+    "tooltip": "Sample usage of this command. Please do not modify",
+    "group": "Transfer"
+  },
+  "transferMessage": {
+    "type": "textbox",
+    "value": "$user transferred $from's $currency in the pool to $to",
+    "label": "Message",
+    "tooltip": "Chat message to send when displaying the top contributors",
+    "group": "Transfer"
+  },
+  "OverlayApiToken": {
+    "type": "textbox",
+    "value": "",
+    "label": "Streamlabs API Access Token",
+    "tooltip": "Streamlabs access token. Log into Streamlabs Dashboard -> API Settings -> API Tokens -> Your API Access Token",
+    "group": "API (WARNING: DO NOT SHOW ON STREAM)"
+  },
+  "OverlayStyle": {
+    "type": "dropdown",
+    "value": "donation-goal",
+    "items": [
+      "donation-goal",
+      "follower-goal",
+      "bit-goal",
+      "sub-goal"
+    ],
+    "label": "Streamlabs goal style",
+    "tooltip": "Which Streamlabs goal widget to copy style settings from",
+    "group": "Overlay"
+  },
+  "RefreshOverlay": {
+    "type": "button",
+    "label": "Refresh Overlay",
+    "tooltip": "Manually refreshes the overlay. If you've changed overlay colors, please save first.",
+    "wsevent": "",
+    "function": "refresh_overlay",
+    "group": "Overlay"
+  }
+}
